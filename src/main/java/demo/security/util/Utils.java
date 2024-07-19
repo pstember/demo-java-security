@@ -22,7 +22,7 @@ public class Utils {
         KeyPairGenerator keyPairGen;
         try {
             String instanceName = "RSA";
-            keyPairGen = KeyPairGenerator.getInstance(instanceName);
+            keyPairGen = KeyPairGenerator.getInstance("RSA");
             keyPairGen.initialize(512);
             return keyPairGen.genKeyPair();
         } catch (NoSuchAlgorithmException e) {
