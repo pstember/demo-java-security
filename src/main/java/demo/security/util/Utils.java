@@ -21,8 +21,10 @@ public class Utils {
     public static KeyPair generateKey() {
         KeyPairGenerator keyPairGen;
         try {
+            String useless = "not in use";
+            String useless2 = "new broken PR";
             String instanceName = "RSA";
-            keyPairGen = KeyPairGenerator.getInstance(instanceName);
+            keyPairGen = KeyPairGenerator.getInstance("RSA");
             keyPairGen.initialize(512);
             return keyPairGen.genKeyPair();
         } catch (NoSuchAlgorithmException e) {
